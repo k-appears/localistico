@@ -1,0 +1,243 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "queryType": {
+          "type": "string"
+        },
+        "queryTime": {
+          "type": "integer"
+        },
+        "numResults": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "totalResults": {
+          "type": "integer"
+        },
+        "fuzzyLevel": {
+          "type": "integer"
+        },
+        "geoBias": {
+          "type": "object",
+          "properties": {
+            "lat": {
+              "type": "number"
+            },
+            "lon": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "score": {
+              "type": "number"
+            },
+            "dist": {
+              "type": "number"
+            },
+            "info": {
+              "type": "string"
+            },
+            "poi": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "categorySet": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "categories": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "classifications": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "names": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "nameLocale": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "nameLocale": {
+                                  "type": "string"
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "address": {
+              "type": "object",
+              "properties": {
+                "streetNumber": {
+                  "type": "string"
+                },
+                "streetName": {
+                  "type": "string"
+                },
+                "municipalitySubdivision": {
+                  "type": "string"
+                },
+                "municipality": {
+                  "type": "string"
+                },
+                "countrySecondarySubdivision": {
+                  "type": "string"
+                },
+                "countrySubdivision": {
+                  "type": "string"
+                },
+                "postalCode": {
+                  "type": "string"
+                },
+                "countryCode": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                },
+                "countryCodeISO3": {
+                  "type": "string"
+                },
+                "freeformAddress": {
+                  "type": "string"
+                },
+                "localName": {
+                  "type": "string"
+                }
+              }
+            },
+            "position": {
+              "type": "object",
+              "properties": {
+                "lat": {
+                  "type": "number"
+                },
+                "lon": {
+                  "type": "number"
+                }
+              }
+            },
+            "viewport": {
+              "type": "object",
+              "properties": {
+                "topLeftPoint": {
+                  "type": "object",
+                  "properties": {
+                    "lat": {
+                      "type": "number"
+                    },
+                    "lon": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "btmRightPoint": {
+                  "type": "object",
+                  "properties": {
+                    "lat": {
+                      "type": "number"
+                    },
+                    "lon": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "entryPoints": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "position": {
+                      "type": "object",
+                      "properties": {
+                        "lat": {
+                          "type": "number"
+                        },
+                        "lon": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
